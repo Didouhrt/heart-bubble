@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #111;
+}
+span{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    background: url('heart.png') center center / cover;
+    width: 4rem;
+    aspect-ratio: 1/1;
+    animation: heart 3s infinite;
+}
+@keyframes heart {
+    0%{
+        filter: hue-rotate(360deg);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%,-80%);
+    }
+}

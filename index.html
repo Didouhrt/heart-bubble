@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>heart bubbles</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<script>
+window.addEventListener('mousemove',(e)=>{
+    let span = document.createElement('span')
+    span.classList.add('span')
+    span.style.top=e.clientY+"px"
+    span.style.left=e.clientX+"px"
+    span.style.width=Math.floor(Math.random()*4)+'rem'
+    document.body.appendChild(span)
+    setTimeout(() => {
+        document.body.removeChild(span)
+    }, 2000);
+})
+</script>
+</body>
+</html>
